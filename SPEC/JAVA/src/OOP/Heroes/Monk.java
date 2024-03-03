@@ -21,7 +21,7 @@ public class Monk extends Character {
     }
 
     @Override
-    public void step(ArrayList<Character> team) {
+    public void step(ArrayList<Character> team, ArrayList<Character> friends) {
 
     }
 }

@@ -61,18 +61,21 @@ public class Main {
                     break;
             }
         }
+        System.out.println();
         System.out.println("TEAM #1:\n");
         team1.forEach(n->n.printName());
         System.out.println();
         System.out.println("TEAM #2:\n");
         team2.forEach(n->n.printName());
-
+/*
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите номер атакующей команды: ");
         int num = scanner.nextInt();
         Scanner scanner1 = new Scanner(System.in);
         System.out.println("Введите класс атакующего персонажа: ");
         String voin = scanner1.nextLine();
+
+
         Character nearVrag = null;
         if (num == 1) {
             for (int i = 0; i < team1.size(); i++) {
@@ -95,7 +98,7 @@ public class Main {
                 }
             }
         } else System.out.println("Некорректный ввод");
-
+*/
     /*
     Добавить в абстрактный класс int поле инициатива. В классах наследников инициализировать это поле.
     Крестьянин = 0,
@@ -116,7 +119,17 @@ public class Main {
         }
     });
 
-    teamAll.forEach(n -> n.print());
+//    teamAll.forEach(n -> n.print());
+//        System.out.println();
+        Scanner scanner = new Scanner((System.in));
+        while (true) {
+            scanner.nextLine();
+            for (Character character : teamAll) {
+                if (team1.contains(character)) character.step(team2,team1);
+                else character.step(team1, team2);
+            }
+            teamAll.forEach(n->n.print());
+        }
     }
 
 

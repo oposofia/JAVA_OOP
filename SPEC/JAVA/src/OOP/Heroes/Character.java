@@ -29,11 +29,11 @@ public abstract class Character implements Step {
         return place-speed;
     }
 
-    protected int getHit(float damage){
+    protected void getHit(float damage){
         health -= damage;
         if (health < 0) health = 0;
         if (health > maxHealth) health = maxHealth;
-        return health;
+
     }
 
     protected int getDamage(Character character){
@@ -54,7 +54,7 @@ public abstract class Character implements Step {
         }
     }
     public void print(){
-        System.out.println("x = " + x + " y = " + y + " Class: " +
+        System.out.println("x = " + position.x + " y = " + position.y + " Class: " +
                 getClass().getSimpleName() + " Name: " + name + "   Health: " + health + "   Gender: " + gender +
                 "   Speed: " + speed + "   Armor: " + armor + "   Damage: " + damage +
                 "   Weapon: " + weapon);

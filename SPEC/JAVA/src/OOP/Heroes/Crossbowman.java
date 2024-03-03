@@ -20,10 +20,11 @@ public class Crossbowman extends Character {
   лучников в методе step().
  */
     @Override
-    public void step(ArrayList<Character> team) {
+    public void step(ArrayList<Character> team, ArrayList<Character> friends) {
         if ((health <= 0) || (arrows <= 0)) return;
         Character vrag = (Character) minDistance(team).get(1);
         vrag.getHit(this.damage);
         arrows--;
+        System.out.println("Атака. ход сделал " + this.name + " " + this.getClass().getSimpleName());
     }
 }

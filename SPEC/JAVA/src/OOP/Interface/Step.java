@@ -7,11 +7,13 @@ package OOP.Interface;
 */
 
 import OOP.Heroes.Character;
+import OOP.Heroes.Place;
 
 
 import java.util.ArrayList;
 
 public interface Step {
 
-    void step(ArrayList<Character> team);
+    void step(ArrayList<Character> team, ArrayList<Character> friends);
+//    void go(Place position);
 }
