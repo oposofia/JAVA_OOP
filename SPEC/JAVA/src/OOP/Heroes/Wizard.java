@@ -23,4 +23,7 @@ public class Wizard extends Character {
     public void step(ArrayList<Character> team, ArrayList<Character> friends) {
 
     }
+    public String getInfo() {
+        return "Волшебник";
+    }
 }

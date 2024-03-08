@@ -18,6 +18,10 @@ public class Sniper extends Character {
     }
 
     @Override
+    public String toString() {
+        return super.toString() + ", \u27b6- " + arrows;
+    }
+    @Override
     public void step(ArrayList<Character> team, ArrayList<Character> friends) {
         if ((health <= 0) || (arrows <= 0)) return;
         Character vrag = (Character) minDistance(team).get(1);
@@ -32,5 +36,8 @@ public class Sniper extends Character {
 
     public void setArrows(int arrows) {
         this.arrows = arrows;
+    }
+    public String getInfo() {
+        return "Снайпер";
     }
 }

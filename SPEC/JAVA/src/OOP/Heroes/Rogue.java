@@ -39,4 +39,8 @@ public class Rogue extends Character {
                 "(" + newposition.x + ", " + newposition.y + ")");
 
     }
+
+    public String getInfo() {
+        return "Разбойник";
+    }
 }

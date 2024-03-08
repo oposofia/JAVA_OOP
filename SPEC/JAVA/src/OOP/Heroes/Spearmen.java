@@ -34,10 +34,13 @@ public class Spearmen extends Character {
             newposition.y += diff.y < 0? 1: -1;
         }
         for (Character friend : friends) {
-            if (friend.position.equals(newposition)) return;
+            if (friend.position.equals(newposition) && friend.health > 0) return;
         }
         this.position = newposition;
         System.out.println("ход сделал " + this.name + " " + this.getClass().getSimpleName()+
                 "(" + newposition.x + ", " + newposition.y + ")");
+    }
+    public String getInfo() {
+        return "Копейщик";
     }
 }

@@ -12,13 +12,18 @@ public class Crossbowman extends Character {
     this.arrows = 10;
     }
 
-/*
-Доработать классы лучников. Лучник должен во первых проверить жив ли
- он и есть ли у него стрелы, если нет то завершить метод.
- Если всё да, то найти ближайшего противника и выстрелить по немы и,
-  соответственно потратить одну стрелу. Реализовать весь функционал
-  лучников в методе step().
- */
+    @Override
+    public String toString() {
+        return super.toString() + ", \u27b6- " + arrows;
+    }
+
+    /*
+    Доработать классы лучников. Лучник должен во первых проверить жив ли
+     он и есть ли у него стрелы, если нет то завершить метод.
+     Если всё да, то найти ближайшего противника и выстрелить по немы и,
+      соответственно потратить одну стрелу. Реализовать весь функционал
+      лучников в методе step().
+     */
     @Override
     public void step(ArrayList<Character> team, ArrayList<Character> friends) {
         if ((health <= 0) || (arrows <= 0)) return;
@@ -26,5 +31,9 @@ public class Crossbowman extends Character {
         vrag.getHit(this.damage);
         arrows--;
         System.out.println("Атака. ход сделал " + this.name + " " + this.getClass().getSimpleName());
+    }
+
+    public String getInfo() {
+        return "Арбалетчик";
     }
 }

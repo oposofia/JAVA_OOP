@@ -9,7 +9,7 @@ public abstract class Character implements Step {
     int health, maxHealth, speed, armor, damage;
     public int x;
     public int y;
-    Place position;
+    public Place position;
 
     public Character(int x, int y, String name, int health, String gender,
                      int speed, int armor, int damage, String weapon){
@@ -53,17 +53,12 @@ public abstract class Character implements Step {
             return false;
         }
     }
-    public void print(){
-        System.out.println("x = " + position.x + " y = " + position.y + " Class: " +
-                getClass().getSimpleName() + " Name: " + name + "   Health: " + health + "   Gender: " + gender +
-                "   Speed: " + speed + "   Armor: " + armor + "   Damage: " + damage +
-                "   Weapon: " + weapon);
+    @Override
+    public String toString(){
+        return name + ", \u2665- " + health + ", ⚔-" + damage + " \uD83D\uDEE1\uFE0F-" + armor;
     }
 
-    public void printName(){
-        System.out.println("x = " + x + " y = " + y + " Class: " +
-                getClass().getSimpleName() + " Name: " + name);
-    }
+
 
     public ArrayList<Object> minDistance(ArrayList<Character> team){
         double minDist = Double.MAX_VALUE;
@@ -85,7 +80,11 @@ public abstract class Character implements Step {
     }
 
 
+    public int getHp() {
+        return health;
+    }
 
-
-
+    public String getInfo() {
+        return "";
+    }
 }
