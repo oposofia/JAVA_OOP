@@ -66,12 +66,14 @@ public class Main {
                 sum2HP += character.getHp();
             }
             if (sum1HP == 0){
-                System.out.println("Победа команды darkTeam");
+                System.out.println("Победа команды GreenSide");
                 flag = false;
+                break;
             }
             if (sum2HP == 0){
-                System.out.println("Победа команды holyTeam");
+                System.out.println("Победа команды BlueSide");
                 flag = false;
+                break;
             }
             for (Character character : allTeam) {
                 if (holyTeam.contains(character)) character.step(darkTeam,holyTeam);

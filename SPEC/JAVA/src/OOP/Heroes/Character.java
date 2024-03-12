@@ -5,23 +5,21 @@ import OOP.Interface.Step;
 import java.util.ArrayList;
 
 public abstract class Character implements Step {
-    String name, gender, weapon;
+    String name;
     int health, maxHealth, speed, armor, damage;
     public int x;
     public int y;
     public Place position;
 
-    public Character(int x, int y, String name, int health, String gender,
-                     int speed, int armor, int damage, String weapon){
+    public Character(int x, int y, String name, int health,
+                     int speed, int armor, int damage){
         position = new Place(x,y);
         maxHealth = health;
         this.name = name;
         this.health = health;
-        this.gender = gender;
         this.speed = speed;
         this.armor = armor;
         this.damage = damage;
-        this.weapon = weapon;
         this.x = x;
         this.y = y;
     }
@@ -40,9 +38,9 @@ public abstract class Character implements Step {
         return health- character.damage;
     }
 
-    protected void retreat(){
-        System.out.println("персонаж сбежал с поля боя");
-    }
+//    protected void retreat(){
+//        System.out.println("персонаж сбежал с поля боя");
+//    }
 
     public boolean heroIsDead(Character target){
         if (target.health <= 0){
@@ -55,7 +53,7 @@ public abstract class Character implements Step {
     }
     @Override
     public String toString(){
-        return name + ", \u2665- " + health + ", ⚔-" + damage + " \uD83D\uDEE1\uFE0F-" + armor;
+        return name + ", \u2665- " + health + ", ⚔-" + damage + " \uD83D\uDEE1\uFE0F-" + armor ;
     }
 
 

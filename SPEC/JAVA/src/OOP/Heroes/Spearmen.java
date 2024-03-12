@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Spearmen extends Character {
     public Spearmen(int x, int y, String name) {
 
-        super(x, y, name, 10, "male", 2, 5, 10, "spear");
+        super(x, y, name, 10, 2, 5, 5);
     }
 
 
@@ -21,6 +21,7 @@ public class Spearmen extends Character {
             return;
         }
         Character vrag = (Character) minDistance(team).get(1);
+        if (vrag == null) return;
         if (position.distance(vrag.position) < 2){
             vrag.getHit(this.damage);
             System.out.println("Атака. ход сделал " + this.name + " " + this.getClass().getSimpleName());
