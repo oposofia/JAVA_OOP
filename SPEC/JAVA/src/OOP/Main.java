@@ -22,13 +22,15 @@ public class Main {
     public static void main(String[] args) {
         int x, y;
         init();
-
+/*
         System.out.println();
         System.out.println("TEAM #1:\n");
         holyTeam.forEach(n->n.toString());
         System.out.println();
         System.out.println("TEAM #2:\n");
         darkTeam.forEach(n->n.toString());
+
+ */
 
     /*
     Добавить в абстрактный класс int поле инициатива. В классах наследников инициализировать это поле.
